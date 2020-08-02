@@ -1,6 +1,15 @@
 ﻿@page "/"
+@page "/Users/{id:int}"
 
 <h1>Hello, world!</h1>
 
 Welcome to your new app.
 <Counter IncrementAmount="10"></Counter>
+
+@code{
+
+    [Parameter]
+    public int Id { get; set; }
+}
+
+<span>id : @Id</span>
